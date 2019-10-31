@@ -1,0 +1,7 @@
+{
+  "name" : "coremark",
+  "base" : "br-base.json",
+  "hostinit" : "build.sh",
+  "files" : [ ["coremark.riscv", "/root/coremark"] ],
+  "run" : "run.sh"
+}

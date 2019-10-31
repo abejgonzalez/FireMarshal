@@ -1,0 +1,78 @@
+{
+  "name" : "spec17-intspeed",
+  "base" : "br-base.json",
+  "workdir" : "spec17",
+  "hostinit" : "build.sh",
+  "overlay" : "speckle/build/overlay/intspeed/ref",
+  "files" : [ ["intspeed.sh", "/root/spec17-intspeed"] ],
+  "outputs" : ["/root/spec17-intspeed/output"],
+  "jobs" : [
+    {
+      "name": "600.perlbench_s",
+      "files": [ ["600.perlbench_s", "/root/spec17-intspeed"] ],
+      "outputs": [],
+      "run": "cd /root/spec17-intspeed && ./intspeed.sh 600.perlbench_s --threads 1"
+    },
+    {
+      "name": "602.gcc_s",
+      "files": [ ["602.gcc_s", "/root/spec17-intspeed"] ],
+      "outputs": [],
+      "run": "cd /root/spec17-intspeed && ./intspeed.sh 602.gcc_s --threads 1"
+    },
+    {
+      "name": "605.mcf_s",
+      "files": [ ["605.mcf_s", "/root/spec17-intspeed"] ],
+      "outputs": [],
+      "run": "cd /root/spec17-intspeed && ./intspeed.sh 605.mcf_s --threads 1"
+    },
+    {
+      "name": "620.omnetpp_s",
+      "files": [ ["620.omnetpp_s", "/root/spec17-intspeed"] ],
+      "outputs": [],
+      "run": "cd /root/spec17-intspeed && ./intspeed.sh 620.omnetpp_s --threads 1"
+    },
+    {
+      "name": "623.xalancbmk_s",
+      "files": [ ["623.xalancbmk_s", "/root/spec17-intspeed"] ],
+      "outputs": [],
+      "run": "cd /root/spec17-intspeed && ./intspeed.sh 623.xalancbmk_s --threads 1"
+    },
+    {
+      "name": "625.x264_s",
+      "files": [ ["625.x264_s", "/root/spec17-intspeed"] ],
+      "outputs": [],
+      "run": "cd /root/spec17-intspeed && ./intspeed.sh 625.x264_s --threads 1"
+    },
+    {
+      "name": "631.deepsjeng_s",
+      "files": [ ["631.deepsjeng_s", "/root/spec17-intspeed"] ],
+      "outputs": [],
+      "run": "cd /root/spec17-intspeed && ./intspeed.sh 631.deepsjeng_s --threads 1"
+    },
+    {
+      "name": "641.leela_s",
+      "files": [ ["641.leela_s", "/root/spec17-intspeed"] ],
+      "outputs": [],
+      "run": "cd /root/spec17-intspeed && ./intspeed.sh 641.leela_s --threads 1"
+    },
+    {
+      "name": "648.exchange2_s",
+      "files": [ ["648.exchange2_s", "/root/spec17-intspeed"] ],
+      "outputs": [],
+      "run": "cd /root/spec17-intspeed && ./intspeed.sh 648.exchange2_s --threads 1"
+    },
+    {
+      "name": "657.xz_s-cpu2006docs",
+      "files": [ ["657.xz_s", "/root/spec17-intspeed"] ],
+      "outputs": [],
+      "run": "cd /root/spec17-intspeed && ./intspeed.sh 657.xz_s --workload 0 --threads 1"
+    },
+    {
+      "name": "657.xz_s-cld",
+      "files": ["657.xz_s"],
+      "files": [ ["657.xz_s", "/root/spec17-intspeed"] ],
+      "outputs": [],
+      "run": "cd /root/spec17-intspeed && ./intspeed.sh 657.xz_s --workload 1 --threads 1"
+    }
+  ]
+}
